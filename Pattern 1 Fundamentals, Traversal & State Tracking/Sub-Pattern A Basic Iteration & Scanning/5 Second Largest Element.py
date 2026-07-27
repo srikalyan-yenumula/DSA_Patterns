@@ -1,4 +1,4 @@
-#i dont thought about it
+#i dont thought about it sort and run loop from right to left
 class Solution:
     
     # Function to find the second largest element
@@ -35,7 +35,8 @@ class Solution:
 """Time Complexity: $O(N \log N)$ where $N$ is the number of elements in the array. This is due to the nums.sort() operation. The subsequent for loop takes $O(N)$ in the worst case, but the sorting dominates the time complexity.Space Complexity: $O(N)$. Python's built-in sort() uses the Timsort algorithm, which requires up to $O(N)$ memory in the worst case to perform its operations."""
 
 
-#i thought it but i dont code it and move to optimal one directly
+#i thought it but i dont code it and move to optimal one directly.
+#  that one is loop and find max then again loop find max that not equal to old max.
 class Solution:
 
     def secondLargestElement(self, nums):
@@ -94,7 +95,7 @@ Space Complexity: O(1), as no additional space is required."""
 
 
 
-
+#use two variables.
 class Solution:
     def secondLargestElement(self, nums):
         m=sm=float("-inf")
