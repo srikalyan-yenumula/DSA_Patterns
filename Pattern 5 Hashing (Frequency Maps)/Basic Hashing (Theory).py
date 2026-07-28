@@ -433,3 +433,17 @@ and started sending massive JSON payloads full of integer-like strings that comp
 security, recreating the exact $O(N^2)$ HashDoS attack we talked about.Your takeaway: You must constantly 
 keep your Node.js runtime updated. If you are running an outdated, End-of-Life version of Node.js, 
 V8's internal armor might have a known crack."""
+
+
+
+#old and new twick
+"""Before Python 3.6, dictionaries were sparse arrays. If you had a dictionary of size 8,
+ but only 3 items in it, Python allocated 8 massive memory blocks (containing the Hash, Key, and Value),
+leaving 5 of them completely empty and wasted.
+The Modern Fix:Python 3.6 introduced the Compact Dictionary.
+Instead of one giant sparse array, Python splits the dictionary into two separate arrays:A small,
+sparse array of indices: This is the power-of-2 array where the bitwise math happens. But it only 
+stores a tiny integer pointing to the real data.A dense array of entries: This stores the actual Hash, Key, 
+and Value in the exact order you inserted them. There are no empty gaps here.By splitting the hashing math
+ from the data storage, modern Python dictionaries take up 20% to 25% less memory than older versions, 
+ while completely preserving $O(1)$ lookups and maintaining insertion order."""
