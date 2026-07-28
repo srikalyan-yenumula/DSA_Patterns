@@ -71,6 +71,33 @@ A Dictionary has to calculate a "hash" for every single number to figure out whe
 An Array lookup (freq[index]) is instant, raw memory access. Because the range is tiny (101 possible numbers), the memory waste is zero, making the array mathematically faster."""
 
 
+#mixied
+"""
+If an interviewer gives you a list like a = [1, 'Z', -4, 'a', 2], it is actually a trap. They are testing to see if you know when to abandon the array method.
+
+Here is why the array method breaks down here, and what you should do instead.
+
+Why the Array Method Fails Here
+1. Python will crash on min() and max()
+In Python 3, you cannot use greater-than or less-than operators between integers and strings. If you try to run min([1, 'a']), Python instantly throws a TypeError. You can't find the range to build your array.
+
+2. Memory Mapping is a Nightmare
+Even if you converted the numbers to strings, how do you map the number -4 and the letter a into the same continuous array of zeros? You would have to write massive, complicated if/else statements to separate the integers from the characters, calculate two different offsets, and manage two different arrays. It defeats the entire purpose of the technique.
+
+The Solution: This is Dictionary Territory
+When data types are mixed, or when the distance between values is totally unpredictable, you must use a Hash Map (a Dictionary or Counter).
+
+Dictionaries don't use a continuous block of memory like arrays do. They use a hashing algorithm. Python can instantly hash an integer (-4) and a string ('a') and store them side-by-side with zero issues and zero wasted memory.
+
+"""
+
+
+
+
+
+
+
+
 
 
 #hahsing
