@@ -62,6 +62,6 @@ class Solution:
                 max_key=max(max_key,key)
         return max_key
 #overall time for all are same O(N) and space is O(U) where U is the number of unique elements in the array.
-# worst case space complexity is O(N) when all elements are unique. 
+# worst case space complexity is O(N) when all elements are unique. u=N
             
             
